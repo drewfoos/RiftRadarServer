@@ -6,11 +6,10 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 	"strings"
 	"sync"
 	"time"
-
-	"github.com/drewfoos/RiftRadarServer/internal/utils"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/mitchellh/mapstructure"
@@ -112,9 +111,9 @@ func getSummonerData(endpoint, apiKey string) (*SummonerData, error) {
 }
 
 func InitApiKey() {
-	apiKey = strings.TrimSpace(utils.GetApiKeyFromFile(".environment.env"))
+	os.Getenv("api_key")
 	if apiKey == "" {
-		log.Fatal("API key not found in .environment.env")
+		log.Fatal("API key not found")
 	}
 }
 
