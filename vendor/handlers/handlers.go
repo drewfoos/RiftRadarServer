@@ -10,7 +10,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/drewfoos/league-finder/internal/utils"
+	"RiftRadar/internal/utils/utils.go"
+
 	"github.com/gofiber/fiber/v2"
 	"github.com/mitchellh/mapstructure"
 	"github.com/patrickmn/go-cache"
