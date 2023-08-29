@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+	"os"
 
 	"github.com/drewfoos/RiftRadarServer/internal/handlers"
 	"github.com/drewfoos/RiftRadarServer/internal/middleware"
@@ -25,9 +25,9 @@ func main() {
 		return c.SendString("Server is healthy")
 	})
 
-	// Start the server
-	err := app.Listen(":8080")
-	if err != nil {
-		fmt.Println(err)
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
 	}
+	app.Listen(":" + port)
 }
