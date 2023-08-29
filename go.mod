@@ -4,7 +4,6 @@ go 1.21.0
 
 require (
 	github.com/gofiber/fiber/v2 v2.49.0
-	github.com/joho/godotenv v1.5.1
 	github.com/mitchellh/mapstructure v1.5.0
 	github.com/patrickmn/go-cache v2.1.0+incompatible
 	github.com/valyala/fasthttp v1.49.0
