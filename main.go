@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/drewfoos/RiftRadarServer/vendor/handlers"
-	"github.com/drewfoos/RiftRadarServer/vendor/middleware"
+	"github.com/drewfoos/RiftRadarServer/internal/handlers"
+	"github.com/drewfoos/RiftRadarServer/internal/middleware"
 	"github.com/gofiber/fiber/v2"
 )
 
